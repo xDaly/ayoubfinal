@@ -1,0 +1,501 @@
+<!-- views/pages/index.ejs -->
+
+
+<head>
+    <% include ./layouts/header %>
+    <% include ./layouts/navbar %>
+
+</head>
+
+<body>
+
+
+
+
+
+
+    <!--everything-->
+    <div class="container">
+        <h2>Nos partenaires</h2>
+        <section class="customer-logos slider">
+            <div class="slide"><img
+                    src="https://image.freepik.com/free-vector/luxury-letter-e-logo-design_1017-8903.jpg"></div>
+            <div class="slide"><img src="http://www.webcoderskull.com/img/logo.png"></div>
+            <div class="slide"><img src="https://image.freepik.com/free-vector/3d-box-logo_1103-876.jpg"></div>
+            <div class="slide"><img src="https://image.freepik.com/free-vector/blue-tech-logo_1103-822.jpg"></div>
+            <div class="slide"><img
+                    src="https://image.freepik.com/free-vector/colors-curl-logo-template_23-2147536125.jpg"></div>
+            <div class="slide"><img src="https://image.freepik.com/free-vector/abstract-cross-logo_23-2147536124.jpg">
+            </div>
+            <div class="slide"><img src="https://image.freepik.com/free-vector/football-logo-background_1195-244.jpg">
+            </div>
+            <div class="slide"><img
+                    src="https://image.freepik.com/free-vector/background-of-spots-halftone_1035-3847.jpg"></div>
+            <div class="slide"><img
+                    src="https://image.freepik.com/free-vector/retro-label-on-rustic-background_82147503374.jpg"></div>
+        </section>
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!--==========================
+            Featured Services Section
+          ============================-->
+    <section id="featured-services">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-4 box">
+                    <i class="ion-ios-bookmarks-outline"></i>
+                    <h4 class="title"><a href="">Une isolation à 1 euro seulement</a></h4>
+                    <p class="description">Isolez vos combles perdus pour 1 € seulement, sous conditions
+                        d'éligibilité.</p>
+                </div>
+
+                <div class="col-lg-4 box box-bg">
+                    <i class="ion-ios-stopwatch-outline"></i>
+                    <h4 class="title"><a href="">Des artisans qualifiés, un produit de qualité</a></h4>
+                    <p class="description">Bénéficiez de matériaux certifiés et de notre réseau de professionnels
+                        RGE</p>
+                </div>
+
+                <div class="col-lg-4 box">
+                    <i class="ion-ios-heart-outline"></i>
+                    <h4 class="title"><a href="">30% d'économies d'énergie</a></h4>
+                    <p class="description">Réduisez votre facture d'énergie et améliorez le confort de votre
+                        logement.</p>
+                </div>
+
+            </div>
+        </div>
+    </section><!-- #featured-services -->
+
+    <!--==========================
+            About Us Section
+          ============================-->
+    <section id="about">
+        <div class="container">
+
+            <header class="section-header">
+                <h3>TESTEZ VOTRE ELIGIBILITÉ</h3>
+                <p>Merci de Remplir le Formulaire, un Expert De Note Part Va Vous Contacter.</p>
+            </header>
+
+            <div class="row about-cols">
+                <form action="/insert" method="post">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="nom" class="formt">Nom</label>
+                            <input id="nom" type="text" name="nom" class="form-control" placeholder="Nom">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="prenom" class="formt">Prenom</label>
+                            <input id="prenom" name="prenom" type="text" class="form-control" placeholder="Prénom">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone" class="formt">Telephone :</label>
+                        <input type="text" id="telephone" name="telephone" class="form-control" placeholder="Telephone">
+                    </div>
+                    <div class="form-group col-md-4 m-4">
+                        <label for="departement" class="formt">Département :</label>
+                        <select class="formt" id="departement" name="departement" class="form-control">
+                            <option> IDF </option>
+                            <option>Province </option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="adresse" class="formt">Addresse : </label>
+                        <input id="adresse" name="adresse" type="text" class="form-control"
+                            placeholder="Apartment, studio, ou maison">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="ville" class="formt">Ville :</label>
+                            <input id="ville" name="ville" type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="cp" class="formt">Code Postale :</label>
+                            <input id="cp" name="cp" type="text" class="form-control" id="inputZip">
+                        </div>
+                        <div class="form-group col-md-4 m-4">
+                            <label for="maison" class="formt">Maison</label>
+                            <select class="formt" id="maison" name="maison" class="form-control">
+                                <option>Individuelle </option>
+                                <option>Appartement </option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4 m-4">
+                            <label for="typedecomble" class="formt">Types de combles: </label>
+                            <select class="formt" id="typedecomble" name="typedecomble" class="form-control">
+                                <option>Perdus </option>
+                                <option>aménageables </option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="surfacecomble" class="formt">Surface combles: </label>
+                            <input id="surfacecomble" name="surfacecomble" type="text" class="form-control"
+                                id="inputCity">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="surfacesoussol" class="formt">Surface sous sol: </label>
+                            <input id="surfacesoussol" name="surfacesoussol" type="text" class="form-control">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="typechauffage" class="formt">Type de chauffage: </label>
+
+                            <input type="text" class="form-control" id="typechauffage" name="typechauffage">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="nombredepersonne" class="formt">Nombre de personne dans le foyer fiscal :
+                            </label>
+                            <input type="text" class="form-control" id="nombredepersonne" name="nombredepersonne">
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+
+                        <div align="center">
+                            <button type="button" data-toggle="modal" data-target="#exampleModal"
+                                class="btn btn-outline-success rounded-pill">
+                                Soumettre
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="form-group">
+                                        <label for="mrf" class="formt">Montant De Reference : </label>
+                                        <input id="mrf" name="mrf" type="text" class="form-control"
+                                            placeholder="Apartment, studio, ou maison">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="rdv" class="formt">Reference De L'avis : </label>
+                                        <input id="rdv" name="rdv" type="text" class="form-control"
+                                            placeholder="Apartment, studio, ou maison">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="nf" class="formt">Numero Fiscale : </label>
+                                        <input id="nf" name="nf" type="text" class="form-control"
+                                            placeholder="Apartment, studio, ou maison">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                                    <button type="submit" class="btn btn-primary">Valider</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </form>
+
+            </div>
+
+        </div>
+    </section><!-- #about -->
+
+    <!--==========================
+            Services Section
+          ============================-->
+    <section id="services">
+        <div class="container">
+
+            <header class="section-header wow fadeInUp">
+                <h3>*******</h3>
+                <p>**********************************************</p>
+            </header>
+
+            <div class="row">
+
+
+
+
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                    <div class="card bg-dark text-white">
+                        <img class="img-thumbnail" src="img/portfolio/app1.jpg" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural
+                                lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">Last updated 3 mins ago</p>
+                        </div>
+                    </div>
+                    <!-- <h4 class="title"><a href="">Magni Dolores</a></h4>
+                  <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p> -->
+                </div>
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                    <div class="card bg-dark text-white">
+                        <img class="img-thumbnail" src="img/portfolio/app1.jpg" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural
+                                lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">Last updated 3 mins ago</p>
+                        </div>
+                    </div>
+                    <!-- <h4 class="title"><a href="">Magni Dolores</a></h4>
+                  <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p> -->
+                </div>
+                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+                    <div class="card bg-dark text-white">
+                        <img class="img-thumbnail" src="img/portfolio/web3.jpg" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural
+                                lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">Last updated 3 mins ago</p>
+                        </div>
+                    </div>
+                    <!-- <h4 class="title"><a href="">Magni Dolores</a></h4>
+                  <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p> -->
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- #services -->
+
+    <section id="portfolio" class="section-bg">
+        <div class="container">
+
+            <header class="section-header">
+                <h3 class="section-title">Our Portfolio</h3>
+            </header>
+
+
+
+            <div class="row portfolio-container">
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp">
+                    <div class="portfolio-wrap">
+                        <figure>
+                            <img src="img/portfolio/app1.jpg" class="img-fluid" alt="">
+                            <a href="img/portfolio/app1.jpg" data-lightbox="portfolio" data-title="App 1"
+                                class="link-preview" title="Preview"><i class="ion ion-eye"></i></a>
+                            <a href="#" class="link-details" title="More Details"><i
+                                    class="ion ion-android-open"></i></a>
+                        </figure>
+
+                        <div class="portfolio-info">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-wrap">
+                        <figure>
+                            <img src="img/portfolio/web3.jpg" class="img-fluid" alt="">
+                            <a href="img/portfolio/web3.jpg" class="link-preview" data-lightbox="portfolio"
+                                data-title="Web 3" title="Preview"><i class="ion ion-eye"></i></a>
+                            <a href="#" class="link-details" title="More Details"><i
+                                    class="ion ion-android-open"></i></a>
+                        </figure>
+
+                        <div class="portfolio-info">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="portfolio-wrap">
+                        <figure>
+                            <img src="img/portfolio/app2.jpg" class="img-fluid" alt="">
+                            <a href="img/portfolio/app2.jpg" class="link-preview" data-lightbox="portfolio"
+                                data-title="App 2" title="Preview"><i class="ion ion-eye"></i></a>
+                            <a href="#" class="link-details" title="More Details"><i
+                                    class="ion ion-android-open"></i></a>
+                        </figure>
+
+                        <div class="portfolio-info">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+                    <div class="portfolio-wrap">
+                        <figure>
+                            <img src="img/portfolio/card2.jpg" class="img-fluid" alt="">
+                            <a href="img/portfolio/card2.jpg" class="link-preview" data-lightbox="portfolio"
+                                data-title="Card 2" title="Preview"><i class="ion ion-eye"></i></a>
+                            <a href="#" class="link-details" title="More Details"><i
+                                    class="ion ion-android-open"></i></a>
+                        </figure>
+
+                        <div class="portfolio-info">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-wrap">
+                        <figure>
+                            <img src="img/portfolio/web2.jpg" class="img-fluid" alt="">
+                            <a href="img/portfolio/web2.jpg" class="link-preview" data-lightbox="portfolio"
+                                data-title="Web 2" title="Preview"><i class="ion ion-eye"></i></a>
+                            <a href="#" class="link-details" title="More Details"><i
+                                    class="ion ion-android-open"></i></a>
+                        </figure>
+
+                        <div class="portfolio-info">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 portfolio-item filter-app wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="portfolio-wrap">
+                        <figure>
+                            <img src="img/portfolio/app3.jpg" class="img-fluid" alt="">
+                            <a href="img/portfolio/app3.jpg" class="link-preview" data-lightbox="portfolio"
+                                data-title="App 3" title="Preview"><i class="ion ion-eye"></i></a>
+                            <a href="#" class="link-details" title="More Details"><i
+                                    class="ion ion-android-open"></i></a>
+                        </figure>
+
+                        <div class="portfolio-info">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp">
+                    <div class="portfolio-wrap">
+                        <figure>
+                            <img src="img/portfolio/card1.jpg" class="img-fluid" alt="">
+                            <a href="img/portfolio/card1.jpg" class="link-preview" data-lightbox="portfolio"
+                                data-title="Card 1" title="Preview"><i class="ion ion-eye"></i></a>
+
+                        </figure>
+
+                        <div class="portfolio-info">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-card wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="portfolio-wrap">
+                        <figure>
+                            <img src="img/portfolio/card3.jpg" class="img-fluid" alt="">
+                            <a href="img/portfolio/card3.jpg" class="link-preview" data-lightbox="portfolio"
+                                data-title="Card 3" title="Preview"><i class="ion ion-eye"></i></a>
+
+                        </figure>
+
+                        <div class="portfolio-info">
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 portfolio-item filter-web wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="portfolio-wrap">
+                        <figure>
+                            <img src="img/portfolio/web1.jpg" class="img-fluid" alt="">
+                            <a href="img/portfolio/web1.jpg" class="link-preview" data-lightbox="portfolio"
+                                data-title="Web 1" title="Preview"><i class="ion ion-eye"></i></a>
+
+                        </figure>
+
+                        <div class="portfolio-info">
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section><!-- #portfolio -->
+
+    <!--==========================
+            Clients Section
+        
+    <section id="clients" class="wow fadeInUp">
+        <div class="container">
+
+            <header class="section-header">
+                <h3>Our Clients</h3>
+            </header>
+
+            <div class="owl-carousel clients-carousel">
+                <img src="img/clients/client-1.png" alt="">
+                <img src="img/clients/client-2.png" alt="">
+                <img src="img/clients/client-3.png" alt="">
+                <img src="img/clients/client-4.png" alt="">
+                <img src="img/clients/client-5.png" alt="">
+                <img src="img/clients/client-6.png" alt="">
+                <img src="img/clients/client-7.png" alt="">
+                <img src="img/clients/client-8.png" alt="">
+            </div>
+
+        </div>
+    </section>
+      ============================-->
+</body>
+<footer>
+    <% include ./layouts/footer %>
+
+</footer>
+
+
+
+</html>
+
+
+
+<script src="/jquery/jquery.min.js"></script>
+<script src="/jquery/jquery-migrate.min.js"></script>
+<script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="/easing/easing.min.js"></script>
+<script src="/superfish/hoverIntent.js"></script>
+<script src="/superfish/superfish.min.js"></script>
+<script src="/wow/wow.min.js"></script>
+<script src="/waypoints/waypoints.min.js"></script>
+<script src="/counterup/counterup.min.js"></script>
+<script src="/owlcarousel/owl.carousel.min.js"></script>
+<script src="/isotope/isotope.pkgd.min.js"></script>
+<script src="/lightbox/js/lightbox.min.js"></script>
+<script src="/touchSwipe/jquery.touchSwipe.min.js"></script>
+<!-- Contact Form JavaScript File -->
+<script src="contactform/contactform.js"></script>
+
+<!-- Template Main Javascript File -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script src="javascripts/main.js"></script>
